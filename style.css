@@ -19,7 +19,7 @@ body {
 
 /*カーソル要素-----------------------*/	
 #cursor{
-    position: fixed; /*bodyの一番左上になるように配置する*/
+    position: absolute; /*bodyの一番左上になるように配置する*/
     top: 0; /*省略可（基準値0）*/
     left: 0; /*省略可（基準値0）*/
 
@@ -33,12 +33,13 @@ body {
     z-index: 999; /*どの要素よりも一番上になるようにする*/
     pointer-events: none; /*他の要素がクリックできなくならないように*/
     opacity: 0; /*一番はじめ（ページ読み込み時）は見えないようにする*/
+    transition: transform 0.5s;/*ホバー時のアニメーションの秒数指定*/
 }
 /*----------------------------------------*/
 
 /*少し遅れてくるストーカー要素-----------------------*/	
 #stalker{
-    position: fixed;
+    position: absolute;
     top: 0; /*省略可（基準値0）*/
     left: 0; /*省略可（基準値0）*/
 
@@ -52,6 +53,12 @@ body {
     z-index: 990;/*カーソルの後ろに来るように*/
     pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
     opacity: 0; /*一番はじめ（ページ読み込み時）は見えないようにする*/
+    transition: transform 0.5s;/*ホバー時のアニメーションの秒数指定*/
+}
+
+#cursor.active,
+#stalker.active{
+transform: scale(1.5);
 }
 /*----------------------------------------*/	
 
@@ -63,7 +70,9 @@ a{
     text-decoration: none;
     color: #000000;
     font-size: 0.875rem;
+    cursor: none;
 }
+
 
 .wrapper{
     width: 100%;
