@@ -19,7 +19,7 @@ body {
 
 /*カーソル要素-----------------------*/	
 #cursor{
-    position: absolute; /*bodyの一番左上になるように配置する*/
+    position: fixed; /*bodyの一番左上になるように配置する*/
     top: 0; /*省略可（基準値0）*/
     left: 0; /*省略可（基準値0）*/
 
@@ -39,7 +39,7 @@ body {
 
 /*少し遅れてくるストーカー要素-----------------------*/	
 #stalker{
-    position: absolute;
+    position: fixed;
     top: 0; /*省略可（基準値0）*/
     left: 0; /*省略可（基準値0）*/
 
