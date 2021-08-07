@@ -33,6 +33,21 @@ $(function(){
         "left":x+"px"
     });
     },140);//カーソルより遅れる時間を指定
+
+    //aタグホバー
+    $("a").on({
+    "mouseenter": function() {
+      //activeクラス付与
+      cursor.addClass("active");
+      stalker.addClass("active");
+      console.log('マウスが重なった！');
+    },
+    "mouseleave": function() {
+      cursor.removeClass("active");
+      stalker.removeClass("active");
+      console.log('マウスが離れた！');
+    }
+    });
     
   });
 });
@@ -45,7 +60,7 @@ $(function(){
 
 //応用形 今回はこの形（mousemoveイベントでカーソル要素を移動させて座標を取得したとき、カーソル要素、ストーカー要素のCSSを書き換える）
 //$(function(){
-//  $("A").B(function{ 　⇦AをBしたとき
-//   $("C").D()        　⇦CをDする
+//  $("A").B(function{ 　←AをBしたとき
+//   $("C").D()        　←CをDする
 //  });  
 //});
