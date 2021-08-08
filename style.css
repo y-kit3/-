@@ -56,10 +56,17 @@ body {
     transition: transform 0.5s;/*ホバー時のアニメーションの秒数指定*/
 }
 
+/*aタグホバー時のCSS-----------------------*/	
 #cursor.active,
 #stalker.active{
-transform: scale(1.5);
+background-color: #fa0202;
 }
+
+#stalker.active{
+    transform: scale(1.5);
+    background-color: #d5fa02;
+}
+
 /*----------------------------------------*/	
 
 li {
