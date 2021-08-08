@@ -33,8 +33,8 @@ body {
     z-index: 999; /*どの要素よりも一番上になるようにする*/
     pointer-events: none; /*他の要素がクリックできなくならないように*/
     opacity: 0; /*一番はじめ（ページ読み込み時）は見えないようにする*/
-    transition: transform 0.5s;/*ホバー時のアニメーションの秒数指定*/
-}
+    transition: background-color 0.1s;/*ホバー時のアニメーションの秒数指定*/
+} 
 /*----------------------------------------*/
 
 /*少し遅れてくるストーカー要素-----------------------*/	
@@ -57,13 +57,13 @@ body {
 }
 
 /*aタグホバー時のCSS-----------------------*/	
-#cursor.active,
-#stalker.active{
+#cursor.active{
 background-color: #fa0202;
 }
 
 #stalker.active{
     transform: scale(1.5);
+    transform: c;
     background-color: #d5fa02;
 }
 
